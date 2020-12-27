@@ -7,6 +7,7 @@ layout: default
 			<div class="w3-half w3-container">
 				<h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
 				{% include youtube.html id=post.video_id %}
+				<p class="w3-right-align"><a href="{{ post.url | relative_url }}" class="w3-button w3-light-green w3-hover-green">Download Grátis</a></p>
 			</div>
 			{% endfor %}
 		</div>
