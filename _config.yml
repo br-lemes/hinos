@@ -1,0 +1,7 @@
+title: Hinos
+email: breno@br-lemes.net
+description: Tablaturas e vídeos do Hinário Adventista
+baseurl: "/hinos"
+paginate: 4
+plugins:
+  - jekyll-paginate

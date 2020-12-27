@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+		<h1>{{ page.title }}</h1>
+		<p>Hino número {{ page.video.hasd | prepend: '0000' | slice: -3, 3 }} do Hinário Adventista do Sétimo Dia em estilo heavy metal.</p>
+		{% include youtube.html id=page.video.id %}

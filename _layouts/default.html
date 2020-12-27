@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="shortcut icon" href="{{ 'music.png' | relative_url }}">
+	<link href="{{ 'w3.css' | relative_url }}" rel="stylesheet">
+	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+	<style>
+		.video-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: hidden;
+		}
+		.video-container iframe, .video-container object, .video-container embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<nav class="w3-card w3-black w3-container w3-center">
+		<a href="{{ '/' | relative_url }}" class="w3-section w3-button w3-black w3-hover-black w3-bottombar w3-border-blue w3-hover-border-red">
+			<img src="{{ 'hinos.png' | relative_url }}" width="320" height="64">
+		</a>
+		<div class="w3-large w3-margin-bottom">{{ site.description }}</div>
+	</nav>
+	<div class="w3-card w3-container w3-content w3-section">
+{{ content }}
+		<hr>
+		<div class="w3-center">
+			<p>Ícones por <a href="https://www.fatcow.com/free-icons/">FatCow</a>.</p>
+			<p>Breno Ramalho Lemes</p>
+		</div>
+	</div>
+	<script>
+		(function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+			w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+			m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','http://marketing.br-lemes.net/mtc.js','mt');
+
+		mt('send', 'pageview');
+	</script>
+</body>
+</html>

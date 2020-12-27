@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+		<div class="w3-row">
+			{% for post in paginator.posts %}
+			<div class="w3-half w3-container">
+				<h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+				{% include youtube.html id=post.video.id %}
+			</div>
+			{% endfor %}
+		</div>
+		<hr>
+		<p class="w3-center">
+		{% if paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path | relative_url }}" class="w3-button w3-light-green w3-hover-green">Mais recentes</a>
+		{% else %}
+			<span class="w3-button w3-disabled">Mais recentes</span>
+		{% endif %}
+			Página: {{ paginator.page }} de {{ paginator.total_pages }}
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path | relative_url }}" class="w3-button w3-light-green w3-hover-green">Mais antigos</a>
+		{% else %}
+			<span class="w3-button w3-disabled">Mais antigos</span>
+		{% endif %}
+		</p>
