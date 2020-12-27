@@ -6,7 +6,7 @@ layout: default
 			{% for post in paginator.posts %}
 			<div class="w3-half w3-container">
 				<h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-				{% include youtube.html id=post.video.id %}
+				{% include youtube.html id=post.video_id %}
 			</div>
 			{% endfor %}
 		</div>

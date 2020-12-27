@@ -3,5 +3,7 @@ layout: default
 ---
 
 		<h1>{{ page.title }}</h1>
-		<p>Hino número {{ page.video.hasd | prepend: '0000' | slice: -3, 3 }} do Hinário Adventista do Sétimo Dia em estilo heavy metal.</p>
-		{% include youtube.html id=page.video.id %}
+		<p>Hino de número {{ page.hasd | prepend: '0000' | slice: -3, 3 }} no Hinário Adventista do Sétimo Dia em estilo heavy metal.</p>
+		<p>Deixe seu nome e e-mail para receber gratuitamente a tablatura desse hino e aprenda a tocar hoje mesmo.</p>
+		<p><script type="text/javascript" src="//marketing.br-lemes.net/form/generate.js?id={{ page.form_id }}"></script></p>
+		{% include youtube.html id=page.video_id %}
