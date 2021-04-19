@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="shortcut icon" href="{{ 'music.png' | relative_url }}">
 	<link href="{{ 'w3.css' | relative_url }}" rel="stylesheet">
+	<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 	<style>
 		.video-container {
@@ -20,6 +21,18 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
+		}
+		#sib-container input:-ms-input-placeholder {
+			text-align: left;
+			color: #c0ccda;
+		}
+		#sib-container input::placeholder {
+			text-align: left;
+			color: #c0ccda;
+		}
+		#sib-container textarea::placeholder {
+			text-align: left;
+			color: #c0ccda;
 		}
 	</style>
 </head>
